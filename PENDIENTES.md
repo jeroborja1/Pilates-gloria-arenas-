@@ -2,7 +2,7 @@
 
 > Generado revisando los `<span class="todo">`, comentarios `TODO` y `TODO-DOMINIO.com` de cada archivo. Para contar los que quedan: `./check-todos.sh`.
 
-Total de pendientes listados: **20**
+Total de pendientes listados: **7**
 
 ## Resumen por prioridad
 
@@ -12,9 +12,6 @@ Total de pendientes listados: **20**
 
 ### Prioridad MEDIA
 
-- [ ] Confirmar con Gloria (duración de cada clase)
-- [ ] Describir con Gloria cómo es una sesión de hipopresivos (duración, frecuencia, nivel)
-- [ ] Duración, frecuencia y niveles de la clase
 
 ### Prioridad BAJA
 
@@ -23,47 +20,31 @@ Total de pendientes listados: **20**
 
 ### index.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (8 apariciones)
-- [ ] **MEDIA** · confirmar con Gloria (duración de cada clase)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### contacto.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (7 apariciones)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### hipopresivos-bogota.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (8 apariciones)
-- [ ] **MEDIA** · describir con Gloria cómo es una sesión de hipopresivos (duración, frecuencia, nivel)
-- [ ] **MEDIA** · confirmar con Gloria (duración de cada clase)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### perfil-profesional.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (9 apariciones)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### pilates-bogota.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (8 apariciones)
-- [ ] **MEDIA** · duración, frecuencia y niveles de la clase
-- [ ] **MEDIA** · confirmar con Gloria (duración de cada clase)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### pilates-embarazadas-bogota.html
 
-- [ ] **ALTA** · (comentario en el código) reemplazar https://TODO-DOMINIO.com por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (8 apariciones)
-
-### robots.txt
-
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (2 apariciones)
+- [ ] **ALTA** · (comentario en el código) reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt
 
 ### sitemap.xml
 
-- [ ] **ALTA** · (comentario en el código) reemplazar TODO-DOMINIO.com por el dominio real
-- [ ] **ALTA** · Reemplazar TODO-DOMINIO.com por el dominio real (7 apariciones)
+- [ ] **ALTA** · (comentario en el código) reemplazar pilates-gloria-arenas.vercel.app por el dominio real
 
 ## Fuera del código
 
@@ -71,6 +52,3 @@ Total de pendientes listados: **20**
 - [ ] Reclamar o actualizar Google Business Profile con la misma dirección, teléfono y horarios
 - [ ] Pedir reseñas en Google a pacientes (la sección "Lo que dicen" enlaza a ellas)
 - [ ] No publicar: `_originales/`, `serve.js`, `check-todos.sh`, `*.backup*`, el `.zip` y los `.mp4` de WhatsApp
-
-## Dominio
-- [ ] Publicado en https://pilates-gloria-arenas.vercel.app. Al comprar el dominio propio: agregarlo en Vercel y reemplazar `pilates-gloria-arenas.vercel.app` por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt.
