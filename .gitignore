@@ -1,0 +1,8 @@
+# Material de trabajo que no se publica
+_originales/
+variantes/
+*.backup*
+*.zip
+*.mp4
+node_modules/
+.vercel/

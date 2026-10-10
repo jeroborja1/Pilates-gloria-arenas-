@@ -1,0 +1,6 @@
+# Archivos internos: no deben servirse en el sitio público
+PENDIENTES.md
+check-todos.sh
+serve.js
+README.md
+.gitignore
