@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TRX en Chicó, Bogotá con fisioterapeuta | Pilates Gloria Arenas</title>
+  <title>TRX en Chicó, Bogotá | Gloria Arenas</title>
   <meta name="description" content="Entrenamiento TRX en Chicó, Bogotá, adaptado a tu nivel y guiado por la fisioterapeuta Gloria Arenas. Pregunta por WhatsApp.">
   <!-- TODO: reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt -->
   <link rel="canonical" href="https://pilates-gloria-arenas.vercel.app/trx-bogota.html">
@@ -15,21 +15,20 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="Pilates Gloria Arenas">
-  <meta property="og:title" content="TRX en Chicó, Bogotá con fisioterapeuta | Pilates Gloria Arenas">
+  <meta property="og:title" content="TRX en Chicó, Bogotá | Gloria Arenas">
   <meta property="og:description" content="Entrenamiento TRX en Chicó, Bogotá, adaptado a tu nivel y guiado por la fisioterapeuta Gloria Arenas. Pregunta por WhatsApp.">
   <meta property="og:url" content="https://pilates-gloria-arenas.vercel.app/trx-bogota.html">
     <meta property="og:image" content="https://pilates-gloria-arenas.vercel.app/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TRX en Chicó, Bogotá con fisioterapeuta | Pilates Gloria Arenas">
+  <meta name="twitter:title" content="TRX en Chicó, Bogotá | Gloria Arenas">
   <meta name="twitter:description" content="Entrenamiento TRX en Chicó, Bogotá, adaptado a tu nivel y guiado por la fisioterapeuta Gloria Arenas. Pregunta por WhatsApp.">
   <meta name="twitter:image" content="https://pilates-gloria-arenas.vercel.app/assets/img/og-image.jpg">
 
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,10 +91,21 @@
       <nav class="nav" id="menu" aria-label="Principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#servicios">Servicios</a></li>
+          <li class="nav__dd">
+            <button class="nav__dd-btn is-current" type="button" aria-expanded="false" aria-controls="menu-servicios">Servicios <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="nav__dd-panel" id="menu-servicios" hidden>
+              <li><a href="pilates-bogota.html">Pilates</a></li>
+              <li><a href="hipopresivos-bogota.html">Hipopresivos</a></li>
+              <li><a href="trx-bogota.html" aria-current="page">TRX</a></li>
+              <li><a href="pilates-embarazadas-bogota.html">Pilates para embarazadas</a></li>
+              <li><a href="rehabilitacion-bogota.html">Rehabilitación</a></li>
+              <li><a href="fitness-bogota.html">Fitness</a></li>
+            </ul>
+          </li>
           <li><a href="perfil-profesional.html">Perfil profesional</a></li>
-          <li><a href="index.html#videos">Videos</a></li>
+          <li><a href="index.html#precios">Tarifas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li class="nav__cta"><a class="btn btn--wa btn--sm" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="header">WhatsApp</a></li>
         </ul>
       </nav>
     </div>

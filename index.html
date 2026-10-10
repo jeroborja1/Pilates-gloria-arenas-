@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pilates e Hipopresivos en Chicó, Bogotá | Pilates Gloria Arenas</title>
-  <meta name="description" content="Clases personalizadas de pilates (también para embarazadas), hipopresivos, TRX y rehabilitación en Chicó, Bogotá, con la fisioterapeuta Gloria Arenas. Grupos muy reducidos y ambiente cálido.">
+  <title>Pilates e hipopresivos en Chicó, Bogotá | Gloria Arenas</title>
+  <meta name="description" content="Clases personalizadas de pilates, hipopresivos, TRX y rehabilitación en Chicó, Bogotá, con la fisioterapeuta Gloria Arenas.">
   <!-- TODO: reemplazar https://pilates-gloria-arenas.vercel.app por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt -->
   <link rel="canonical" href="https://pilates-gloria-arenas.vercel.app/">
   <meta name="theme-color" content="#24476b">
@@ -15,22 +15,21 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="Pilates Gloria Arenas">
-  <meta property="og:title" content="Pilates e Hipopresivos en Chicó, Bogotá | Pilates Gloria Arenas">
-  <meta property="og:description" content="Pilates, hipopresivos, TRX y rehabilitación con la fisioterapeuta Gloria Arenas en Chicó, Bogotá.">
+  <meta property="og:title" content="Pilates e hipopresivos en Chicó, Bogotá | Gloria Arenas">
+  <meta property="og:description" content="Clases personalizadas de pilates, hipopresivos, TRX y rehabilitación en Chicó, Bogotá, con la fisioterapeuta Gloria Arenas.">
   <meta property="og:url" content="https://pilates-gloria-arenas.vercel.app/">
     <meta property="og:image" content="https://pilates-gloria-arenas.vercel.app/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pilates e Hipopresivos en Chicó, Bogotá | Pilates Gloria Arenas">
-  <meta name="twitter:description" content="Pilates, hipopresivos, TRX y rehabilitación con la fisioterapeuta Gloria Arenas en Chicó, Bogotá.">
+  <meta name="twitter:title" content="Pilates e hipopresivos en Chicó, Bogotá | Gloria Arenas">
+  <meta name="twitter:description" content="Clases personalizadas de pilates, hipopresivos, TRX y rehabilitación en Chicó, Bogotá, con la fisioterapeuta Gloria Arenas.">
   <meta name="twitter:image" content="https://pilates-gloria-arenas.vercel.app/assets/img/og-image.jpg">
 
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="assets/img/hero-estudio.webp" imagesrcset="assets/img/hero-estudio-800.webp 800w, assets/img/hero-estudio.webp 1400w" imagesizes="(min-width: 820px) 1216px, calc(100vw - 40px)">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
   {
@@ -156,10 +155,21 @@
       <nav class="nav" id="menu" aria-label="Principal">
         <ul>
           <li><a href="index.html" aria-current="page">Inicio</a></li>
-          <li><a href="index.html#servicios">Servicios</a></li>
+          <li class="nav__dd">
+            <button class="nav__dd-btn" type="button" aria-expanded="false" aria-controls="menu-servicios">Servicios <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="nav__dd-panel" id="menu-servicios" hidden>
+              <li><a href="pilates-bogota.html">Pilates</a></li>
+              <li><a href="hipopresivos-bogota.html">Hipopresivos</a></li>
+              <li><a href="trx-bogota.html">TRX</a></li>
+              <li><a href="pilates-embarazadas-bogota.html">Pilates para embarazadas</a></li>
+              <li><a href="rehabilitacion-bogota.html">Rehabilitación</a></li>
+              <li><a href="fitness-bogota.html">Fitness</a></li>
+            </ul>
+          </li>
           <li><a href="perfil-profesional.html">Perfil profesional</a></li>
-          <li><a href="index.html#videos">Videos</a></li>
+          <li><a href="index.html#precios">Tarifas</a></li>
           <li><a href="contacto.html">Contacto</a></li>
+          <li class="nav__cta"><a class="btn btn--wa btn--sm" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="header">WhatsApp</a></li>
         </ul>
       </nav>
     </div>
@@ -184,8 +194,6 @@
         </div>
       </div>
     </section>
-
-    <!-- BARRA DE CONFIANZA -->
     <section class="trust" aria-label="Datos clave">
       <div class="container">
         <ul class="trust__list">
@@ -201,114 +209,99 @@
       <div class="container">
         <h2>Nuestros servicios</h2>
         <p class="section__intro">Con la fisioterapeuta Gloria Arenas puedes lograr múltiples beneficios con pilates o hipopresivos, de forma individual o combinada. Son formas de ejercicio diseñadas por expertos en movimiento corporal humano.</p>
-        <div class="featured featured--six">
-          <article class="card card--featured">
+        <div class="services">
+          <article class="card card--lead">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M12 7.5v5M6 10l6-2.5 6 2.5M7 21l5-8.5L17 21"/></svg></div>
             <h3>Pilates</h3>
             <p>Clases personalizadas para fortalecer, ganar flexibilidad y mejorar la postura y el control del movimiento.</p>
             <p>Cada clase se adapta a ti, a tu cuerpo y a tus objetivos, con la guía de una fisioterapeuta.</p>
-            <a class="btn btn--outline" href="pilates-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="pilates-bogota.html" aria-label="Conocer más sobre Pilates">Conocer más</a>
           </article>
-          <article class="card card--featured">
+          <article class="card card--lead">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h14a3 3 0 1 1-3 3M3 16h6"/></svg></div>
             <h3>Hipopresivos</h3>
             <p>Técnica de ejercicio basada en la postura y la respiración, guiada paso a paso por una fisioterapeuta.</p>
             <p>Puedes practicarla sola o combinada con pilates.</p>
-            <a class="btn btn--outline" href="hipopresivos-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="hipopresivos-bogota.html" aria-label="Conocer más sobre Hipopresivos">Conocer más</a>
           </article>
-          <article class="card card--featured">
+          <article class="card">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v8M16 3v8"/><circle cx="8" cy="15" r="3.5"/><circle cx="16" cy="15" r="3.5"/></svg></div>
             <h3>TRX</h3>
             <p>Entrenamiento en suspensión, adaptado a tu nivel, para trabajar fuerza y estabilidad de forma segura.</p>
-            <a class="btn btn--outline" href="trx-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="trx-bogota.html" aria-label="Conocer más sobre TRX">Conocer más</a>
           </article>
-          <article class="card card--featured">
+          <article class="card">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="4.5" r="2"/><path d="M9 8c-1.5 0-2.5 1-2.5 2.5V14M9 8c3.5 0 6.5 2.5 6.5 6S13 19 9.5 19v2.5M8 14v7.5"/></svg></div>
             <h3>Pilates para embarazadas</h3>
             <p>Un espacio de pilates pensado para acompañar el embarazo, con la guía de una fisioterapeuta.</p>
-            <a class="btn btn--outline" href="pilates-embarazadas-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="pilates-embarazadas-bogota.html" aria-label="Conocer más sobre Pilates para embarazadas">Conocer más</a>
           </article>
-          <article class="card card--featured">
+          <article class="card">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></div>
             <h3>Rehabilitación</h3>
             <p>Atención para personas con una patología específica, con acompañamiento profesional de fisioterapia.</p>
-            <a class="btn btn--outline" href="rehabilitacion-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="rehabilitacion-bogota.html" aria-label="Conocer más sobre Rehabilitación">Conocer más</a>
           </article>
-          <article class="card card--featured">
+          <article class="card">
             <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19c2-4 5-7 9-9"/></svg></div>
             <h3>Fitness</h3>
             <p>Para quienes simplemente quieren sentirse bien, mantenerse activos y cuidar su cuerpo.</p>
-            <a class="btn btn--outline" href="fitness-bogota.html">Conocer más</a>
+            <a class="btn btn--outline" href="fitness-bogota.html" aria-label="Conocer más sobre Fitness">Conocer más</a>
           </article>
         </div>
-        <div class="pricing" id="precios">
-          <h3>Precios 2026</h3>
-          <p class="pricing__sub">Clases de pilates duales</p>
-          <table class="price-table">
-            <caption class="sr-only">Valor de las clases de pilates duales según cuántas clases tomes al mes</caption>
-            <thead><tr><th scope="col">Clases al mes</th><th scope="col">Valor</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">1 a 5 veces al mes</th><td>$75.000</td></tr>
-              <tr><th scope="row">6 a 9 veces al mes</th><td>$71.000</td></tr>
-              <tr><th scope="row">10 a 13 veces al mes</th><td>$68.000</td></tr>
-              <tr><th scope="row">14 a 17 veces al mes</th><td>$61.000</td></tr>
-            </tbody>
-          </table>
-          <p class="pricing__sub">15% de descuento por ser familia</p>
-          <table class="price-table">
-            <caption class="sr-only">Paquetes de clases para tomar en 3 meses</caption>
-            <thead><tr><th scope="col">Paquete</th><th scope="col">Valor</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">23 clases que deben ser vistas en 3 meses</th><td>$1.388.000</td></tr>
-              <tr><th scope="row">30 clases que deben ser vistas en 3 meses</th><td>$1.734.000</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <a class="btn btn--wa" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="servicios">Consultar por WhatsApp</a>
       </div>
     </section>
 
-    <!-- PILATES PARA EMBARAZADAS -->
-    <section class="section" id="embarazadas">
-      <div class="container split">
-        <div>
-          <h2>Pilates para embarazadas</h2>
-          <p>Un espacio de pilates pensado para mujeres embarazadas, en un ambiente tranquilo y acogedor, con el acompañamiento de la fisioterapeuta Gloria Arenas.</p>
-          <p>Las clases son personalizadas y se adaptan a ti y a esta etapa de tu vida.</p>
-          <p>El Pilates puede acompañarte durante los tres trimestres del embarazo, siempre que tu médico lo autorice.</p>
-          <a class="btn btn--wa" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20pilates%20para%20embarazadas" target="_blank" rel="noopener" data-track="whatsapp" data-location="embarazadas">Preguntar por WhatsApp</a>
-          <a class="btn btn--outline" href="pilates-embarazadas-bogota.html">Conocer más</a>
+    <!-- 3. TARIFAS -->
+    <section class="section" id="precios">
+      <div class="container">
+        <h2>Precios 2026</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Clases de pilates duales</h3>
+            <table class="price-table">
+              <caption class="sr-only">Valor por clase de pilates duales según cuántas clases tomes al mes</caption>
+              <thead><tr><th scope="col">Clases al mes</th><th scope="col">Valor por clase</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1 a 5 veces al mes</th><td>$75.000</td></tr>
+                <tr><th scope="row">6 a 9 veces al mes</th><td>$71.000</td></tr>
+                <tr><th scope="row">10 a 13 veces al mes</th><td>$68.000</td></tr>
+                <tr><th scope="row">14 a 17 veces al mes</th><td>$61.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="price-card">
+            <h3>15% de descuento por ser familia</h3>
+            <table class="price-table">
+              <caption class="sr-only">Paquetes de clases para tomar en 3 meses</caption>
+              <thead><tr><th scope="col">Paquete</th><th scope="col">Valor</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">23 clases que deben ser vistas en 3 meses</th><td>$1.388.000</td></tr>
+                <tr><th scope="row">30 clases que deben ser vistas en 3 meses</th><td>$1.734.000</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="gallery gallery--two">
-          <figure><img src="assets/img/embarazo-sentada.webp" width="900" height="604" loading="lazy" alt="Mujer embarazada sentada en el suelo con las manos sobre las piernas, fotografía en blanco y negro"></figure>
-          <figure><img src="assets/img/embarazo-perfil.webp" width="900" height="604" loading="lazy" alt="Mujer embarazada de perfil apoyada sobre un brazo en el suelo, fotografía en blanco y negro"></figure>
-        </div>
+        <a class="btn btn--wa" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="tarifas">Consultar por WhatsApp</a>
       </div>
     </section>
 
-    <!-- 3. QUIÉN ES GLORIA -->
-    <section class="section section--soft" id="gloria">
-      <div class="container split">
-        <div>
-          <img class="photo photo--portrait" src="assets/img/retrato-gloria.webp" width="700" height="963" loading="lazy" alt="Gloria Arenas, fisioterapeuta, sentada en una silla de madera en un espacio luminoso con una planta">
-        </div>
-        <div>
-          <h2>Quién es Gloria Arenas</h2>
-          <p>Gloria Arenas es fisioterapeuta y dirige este espacio de pilates, hipopresivos, TRX y rehabilitación en Bogotá. Su trabajo une el conocimiento del movimiento corporal humano con una atención cercana y personalizada.</p>
-          <p>Es fisioterapeuta de la Universidad del Rosario, con énfasis en ejercicio físico, y tiene más de 20 años de experiencia trabajando con Pilates y rehabilitación.</p>
-          <a class="btn btn--primary" href="perfil-profesional.html">Conocer su perfil profesional</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. POR QUÉ ELEGIR -->
-    <section class="section" id="por-que">
+    <!-- 4. QUIÉN ES GLORIA + POR QUÉ ELEGIR -->
+    <section class="section section--band" id="gloria">
       <div class="container split split--start">
-        <div>
+        <div class="about">
+          <img class="photo photo--portrait" src="assets/img/retrato-gloria.webp" width="700" height="963" loading="lazy" alt="Gloria Arenas, fisioterapeuta, sentada en una silla de madera en un espacio luminoso con una planta">
+          <div class="about__bio">
+            <h2>Quién es Gloria Arenas</h2>
+            <p>Gloria Arenas es fisioterapeuta y dirige este espacio de pilates, hipopresivos, TRX y rehabilitación en Bogotá. Su trabajo une el conocimiento del movimiento corporal humano con una atención cercana y personalizada.</p>
+            <p>Es fisioterapeuta de la Universidad del Rosario, con énfasis en ejercicio físico, y tiene más de 20 años de experiencia trabajando con Pilates y rehabilitación.</p>
+            <a class="btn btn--primary" href="perfil-profesional.html">Conocer su perfil profesional</a>
+          </div>
+        </div>
+        <div id="por-que">
           <h2>Por qué elegir este espacio</h2>
           <p class="section__intro">Un lugar distinto a los estudios de pilates y gimnasios típicos, pensado para personas con una patología específica y para quienes quieren sentirse bien.</p>
-        </div>
-        <ul class="checklist">
+          <ul class="checklist">
           <li>
             <span class="checklist__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
             <div><h3>Atención personalizada</h3><p>Cada clase se adapta a ti, a tu cuerpo y a tus objetivos, con la guía de una fisioterapeuta.</p></div>
@@ -322,11 +315,12 @@
             <div><h3>Grupos reducidos</h3><p>Clases para máximo dos personas.</p></div>
           </li>
         </ul>
+        </div>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section class="section section--band" id="como-funciona">
+    <!-- 5. CÓMO FUNCIONA -->
+    <section class="section" id="como-funciona">
       <div class="container">
         <h2>Cómo funciona</h2>
         <p class="section__intro">Empezar es sencillo. Estos son los pasos para tu primera clase.</p>
@@ -344,12 +338,12 @@
             <p>Armamos un plan de pilates, hipopresivos o TRX, solo o combinado, adaptado a ti.</p>
           </li>
         </ol>
-        <p style="margin-top:32px"><a class="btn btn--wa" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="como-funciona">Empezar por WhatsApp</a></p>
+        <p class="section__cta"><a class="btn btn--wa" href="https://wa.me/573187159369?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases%20de%20pilates" target="_blank" rel="noopener" data-track="whatsapp" data-location="como-funciona">Empezar por WhatsApp</a></p>
       </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="section" id="estudio">
+    <!-- 6. CONOCE EL ESTUDIO -->
+    <section class="section section--band" id="estudio">
       <div class="container">
         <h2>Conoce el estudio</h2>
         <p class="section__intro">Un espacio luminoso, con equipos de pilates y TRX, grandes ventanales y vista a los árboles.</p>
@@ -364,16 +358,17 @@
       </div>
     </section>
 
-    <!-- 5. VIDEOS Y TESTIMONIO -->
-    <section class="section section--soft" id="videos">
+    <!-- 7. VIDEOS Y TESTIMONIOS -->
+    <section class="section" id="testimonios">
       <div class="container">
-        <h2>Videos y testimonio</h2>
-        <p class="section__intro">Conoce qué es el pilates, qué son los hipopresivos y escucha la experiencia de la actriz Alejandra Lara.</p>
-        <div class="video-grid">
+        <div id="videos">
+          <h2>Videos y testimonio</h2>
+          <p class="section__intro">Conoce qué es el pilates, qué son los hipopresivos y escucha la experiencia de la actriz Alejandra Lara.</p>
+          <div class="video-grid">
           <figure class="video video--featured" style="margin:0">
             <div class="video__frame">
               <button class="video__btn" type="button" data-video="UFyqmTf7piQ" data-title="Presentación: qué es el pilates" aria-label="Reproducir video: Presentación, qué es el pilates">
-                <img src="https://i.ytimg.com/vi/UFyqmTf7piQ/maxresdefault.jpg" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/UFyqmTf7piQ/hqdefault.jpg'" alt="Miniatura del video de presentación: qué es el pilates">
+                <img src="https://i.ytimg.com/vi/UFyqmTf7piQ/hqdefault.jpg" width="480" height="360" loading="lazy" alt="Miniatura del video de presentación: qué es el pilates">
                 <span class="video__play" aria-hidden="true"></span>
               </button>
             </div>
@@ -382,7 +377,7 @@
           <figure class="video" style="margin:0">
             <div class="video__frame">
               <button class="video__btn" type="button" data-video="DItszYuq0DE" data-title="Testimonio de la actriz Alejandra Lara" aria-label="Reproducir video: Testimonio de la actriz Alejandra Lara">
-                <img src="https://i.ytimg.com/vi/DItszYuq0DE/maxresdefault.jpg" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DItszYuq0DE/hqdefault.jpg'" alt="Miniatura del video con el testimonio de la actriz Alejandra Lara">
+                <img src="https://i.ytimg.com/vi/DItszYuq0DE/hqdefault.jpg" width="480" height="360" loading="lazy" alt="Miniatura del video con el testimonio de la actriz Alejandra Lara">
                 <span class="video__play" aria-hidden="true"></span>
               </button>
             </div>
@@ -391,21 +386,17 @@
           <figure class="video" style="margin:0">
             <div class="video__frame">
               <button class="video__btn" type="button" data-video="9mKcptU83YU" data-title="¿Qué son los hipopresivos?" aria-label="Reproducir video: Qué son los hipopresivos">
-                <img src="https://i.ytimg.com/vi/9mKcptU83YU/maxresdefault.jpg" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/9mKcptU83YU/hqdefault.jpg'" alt="Miniatura del video explicativo: qué son los hipopresivos">
+                <img src="https://i.ytimg.com/vi/9mKcptU83YU/hqdefault.jpg" width="480" height="360" loading="lazy" alt="Miniatura del video explicativo: qué son los hipopresivos">
                 <span class="video__play" aria-hidden="true"></span>
               </button>
             </div>
             <figcaption class="video__caption"><h3>¿Qué son los hipopresivos?</h3><p>Una explicación sencilla de esta técnica.</p></figcaption>
           </figure>
         </div>
-      </div>
-    </section>
-
-    <!-- LO QUE DICEN -->
-    <section class="section" id="opiniones">
-      <div class="container">
-        <h2>Lo que dicen</h2>
-        <div class="quotes">
+        </div>
+        <div class="testimonials-block" id="opiniones">
+          <h3>Lo que dicen</h3>
+          <div class="quotes">
           <figure class="quote">
             <p class="quote__stars" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
             <blockquote><p>Gloria tiene una metodología personalizada que se enfocaba en mis necesidades. En caso puntual me ayudó a mejorar mi estado físico y fortalecer al mismo tiempo que tenía en cuenta una lesión que tenía antes por jugar fútbol. Las combinación de hipopresivos y pilates me dio muy buenos resultados.</p></blockquote>
@@ -422,11 +413,12 @@
             <figcaption>Maria Lucia Ortega Garcia<span class="quote__src">Reseña en Google</span></figcaption>
           </figure>
         </div>
-        <p style="margin-top:32px"><a class="btn btn--outline" href="https://www.google.com/maps/place/Pilates+Gloria+Arenas/@4.7284224,-74.0524032,12z/data=!4m6!3m5!1s0x8e3f9a93fd5f29cd:0xce31d070d90a8db6!8m2!3d4.6803866!4d-74.0477391!16s%2Fg%2F11bw4x9yk0" target="_blank" rel="noopener">Ver reseñas en Google</a></p>
+          <p class="section__cta"><a class="btn btn--outline" href="https://www.google.com/maps/place/Pilates+Gloria+Arenas/@4.7284224,-74.0524032,12z/data=!4m6!3m5!1s0x8e3f9a93fd5f29cd:0xce31d070d90a8db6!8m2!3d4.6803866!4d-74.0477391!16s%2Fg%2F11bw4x9yk0" target="_blank" rel="noopener">Ver reseñas en Google</a></p>
+        </div>
       </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
+    <!-- 8. PREGUNTAS FRECUENTES -->
     <section class="section section--band" id="preguntas">
       <div class="container">
         <h2>Preguntas frecuentes</h2>
@@ -455,7 +447,7 @@
       </div>
     </section>
 
-    <!-- 6. CONTACTO -->
+    <!-- 9. CONTACTO -->
     <section class="section" id="contacto">
       <div class="container split">
         <div>
@@ -485,6 +477,7 @@
           <p class="map__link"><a href="https://www.google.com/maps/place/Pilates+Gloria+Arenas/@4.7284224,-74.0524032,12z/data=!4m6!3m5!1s0x8e3f9a93fd5f29cd:0xce31d070d90a8db6!8m2!3d4.6803866!4d-74.0477391!16s%2Fg%2F11bw4x9yk0" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
         </div>
       </div>
+    
     </section>
   </main>
 

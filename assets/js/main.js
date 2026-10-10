@@ -1,4 +1,9 @@
 (function () {
+  // Marca que hay JavaScript (las animaciones de entrada solo se activan con JS)
+  document.documentElement.classList.add('js');
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // ---- Menú móvil (toque y teclado: Esc lo cierra y devuelve el foco al botón)
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('menu');
@@ -8,10 +13,40 @@
   }
   if (toggle && nav) {
     toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
-    });
   }
+
+  // ---- Menú "Servicios": desplegable accesible (acordeón en móvil)
+  var dd = document.querySelector('.nav__dd');
+  var ddBtn = dd && dd.querySelector('.nav__dd-btn');
+  var ddPanel = dd && dd.querySelector('.nav__dd-panel');
+  function ddLinks() { return ddPanel ? Array.prototype.slice.call(ddPanel.querySelectorAll('a')) : []; }
+  function setDd(open, focusFirst) {
+    if (!ddBtn) return;
+    ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    ddPanel.hidden = !open;
+    if (open && focusFirst) { var l = ddLinks(); if (l[0]) l[0].focus(); }
+  }
+  if (ddBtn && ddPanel) {
+    ddBtn.addEventListener('click', function () { setDd(ddPanel.hidden); });
+    ddBtn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); setDd(true, true); }
+    });
+    ddPanel.addEventListener('keydown', function (e) {
+      var l = ddLinks(), i = l.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') { e.preventDefault(); l[(i + 1) % l.length].focus(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); l[(i - 1 + l.length) % l.length].focus(); }
+      else if (e.key === 'Home') { e.preventDefault(); l[0].focus(); }
+      else if (e.key === 'End') { e.preventDefault(); l[l.length - 1].focus(); }
+    });
+    document.addEventListener('click', function (e) { if (!dd.contains(e.target)) setDd(false); });
+    dd.addEventListener('focusout', function (e) { if (e.relatedTarget && !dd.contains(e.relatedTarget)) setDd(false); });
+  }
+  // Esc: cierra primero el desplegable y, si no hay, el menú móvil
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (ddPanel && !ddPanel.hidden) { setDd(false); ddBtn.focus(); return; }
+    if (nav && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+  });
 
   // ---- Videos de YouTube con carga diferida: el iframe se crea solo al hacer clic
   document.querySelectorAll('.video__btn').forEach(function (btn) {
@@ -32,6 +67,18 @@
       window.gtag('event', 'click_whatsapp', { location: link.getAttribute('data-location') || 'desconocida' });
     }
   });
+
+  // ---- Botón flotante de WhatsApp: se oculta si hay otro botón de WhatsApp visible en pantalla
+  var floatBtn = document.querySelector('.wa-float');
+  var waButtons = document.querySelectorAll('.btn--wa:not(.nav__cta .btn)');
+  if (floatBtn && waButtons.length && 'IntersectionObserver' in window) {
+    var visibleWa = new Set();
+    var waObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) visibleWa.add(e.target); else visibleWa.delete(e.target); });
+      floatBtn.classList.toggle('is-hidden', visibleWa.size > 0);
+    }, { threshold: 0.1 });
+    waButtons.forEach(function (b) { waObserver.observe(b); });
+  }
 
   // ---- Galería con lightbox accesible (<dialog>): Esc cierra y el foco vuelve a la foto
   var figures = document.querySelectorAll('#estudio .gallery figure');
@@ -66,8 +113,7 @@
   }
 
   // ---- Preguntas frecuentes: apertura y cierre animados (altura + opacidad), interrumpibles
-  var reduceFaq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduceFaq && typeof Element.prototype.animate === 'function') {
+  if (!reduce && typeof Element.prototype.animate === 'function') {
     var EASE = 'cubic-bezier(0.23, 1, 0.32, 1)';
     document.querySelectorAll('.faq details').forEach(function (d) {
       var summary = d.querySelector('summary');
@@ -105,13 +151,11 @@
   }
 
   // ---- Entrada al hacer scroll (decorativa). Sin JS o con movimiento reducido todo se ve completo.
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
-
   var vh = window.innerHeight || document.documentElement.clientHeight;
   var pending = [];
-  document.querySelectorAll('.card, .video, .quote, .step, .faq details, .service-list li, .checklist li, .section h2, .section__intro, .gallery figure, .split > *').forEach(function (el) {
-    // Lo que ya está visible al cargar (hero, etc.) no se anima
+  document.querySelectorAll('.card, .video, .quote, .step, .faq details, .checklist li, .price-card, .section h2, .section__intro, .gallery figure, .split > *').forEach(function (el) {
+    // Lo que ya está visible al cargar no se anima
     if (el.getBoundingClientRect().top < vh) return;
     var siblings = Array.prototype.filter.call(el.parentNode.children, function (n) { return n.tagName === el.tagName; });
     el.style.setProperty('--i', Math.min(siblings.indexOf(el), 5));
