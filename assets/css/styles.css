@@ -404,3 +404,90 @@ p { margin: 0 0 var(--s-2); max-width: var(--measure); }
 /* Botón WhatsApp del encabezado: conserva su relleno y su forma de píldora */
 .nav .nav__cta .btn { padding: 8px 22px; min-height: 44px; gap: 8px; border-radius: var(--radius-pill); font-size: var(--fs-small); font-weight: 500; line-height: 1.2; white-space: nowrap; }
 @media (max-width: 999px) { .nav .nav__cta .btn { width: 100%; padding: 10px 26px; min-height: 48px; font-size: 1.0625rem; } }
+
+/* ==========================================================
+   PROFUNDIDAD Y PERSONALIDAD — Fraunces en títulos, fondos crema/azul/marino,
+   tarjetas con sombra en capas, fotos en tarjetas y reseña destacada.
+   ========================================================== */
+@font-face { font-family: "Fraunces"; src: url("../fonts/fraunces-normal-latin.woff2") format("woff2"); font-weight: 500 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("../fonts/fraunces-italic-latin.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+
+:root {
+  --cream: #f7f1e8;
+  --blue-soft: #d5e0ea;
+  --line-band: #bccddd;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --radius: 16px;
+  --section-y: 56px;
+  --fs-h1: clamp(2.25rem, 5vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --shadow-1: 0 1px 2px rgb(36 71 107 / .08), 0 8px 24px rgb(36 71 107 / .08);
+  --shadow-2: 0 2px 4px rgb(36 71 107 / .10), 0 16px 36px rgb(36 71 107 / .16);
+}
+@media (min-width: 820px) { :root { --section-y: 80px; } }
+
+/* Tipografía: títulos en Fraunces, el resto en Inter */
+h1, h2, h3, .pullquote p { font-family: var(--font-serif); }
+h1 { font-size: var(--fs-h1); font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; }
+h3 { font-weight: 600; line-height: 1.25; letter-spacing: -0.005em; }
+.pullquote p { font-weight: 500; letter-spacing: -0.01em; }
+.eyebrow { margin: 0 0 12px; font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; line-height: 1.3; color: var(--blue-deep); max-width: none; }
+.section:not(.section--band):not(.section--navy) .eyebrow, .hero .eyebrow { color: var(--blue); }
+
+/* Fondos: blanco, crema, azul claro y UNA sección en azul marino (Tarifas) */
+.section { background: #fff; border-top: 0; }
+.section + .section, .trust + .section { border-top: 0; }
+.section--cream { background: var(--cream); }
+.section--band { --card-line: var(--line-band); background: var(--blue-soft); }
+.section--navy { background: var(--blue-deep); color: #fff; }
+.section--navy h2, .section--navy h3 { color: #fff; }
+.section--navy .eyebrow { color: #b9cde3; }
+.section--navy .price-card h3 { color: var(--blue-deep); }
+.hero { background: var(--cream); }
+.trust { background: #fff; border-top: 0; border-bottom: 1px solid var(--line); }
+
+/* Tarjetas: sombra en capas, sin borde, radio 16px */
+.card, .quote, .video, .price-card, .faq details { border: 0; border-radius: var(--radius); box-shadow: var(--shadow-1); background: #fff; }
+.card:hover { border: 0; }
+.photo, .hero__media, .gallery figure, .gallery img, .map, .lightbox, .lightbox img { border-radius: var(--radius); }
+.faq summary { border-radius: var(--radius); }
+.section--cream .card, .section--cream .quote, .section--cream .video { background: #fff; }
+@media (hover: hover) and (pointer: fine) {
+  .card, .quote, .video, .price-card { transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+  .card:hover, .quote:hover, .video:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); border-color: transparent; }
+}
+
+/* Servicios con foto arriba */
+.card--media { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.card__media { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 0; }
+.card--lead .card__media { aspect-ratio: 16 / 9; }
+.card__body { display: flex; flex: 1; flex-direction: column; padding: var(--s-3); }
+.card--lead .card__body { padding: var(--s-4); }
+.card--media .card__body .btn { margin-top: auto; align-self: flex-start; }
+.card--media h3 { font-size: 1.375rem; }
+.card--lead h3 { font-size: 1.625rem; }
+
+/* Videos: miniatura real sin barras negras, play encima, descripción debajo */
+.video__btn img { object-position: 50% 50%; }
+.video__btn::after { background: rgb(0 0 0 / .08); }
+
+/* Reseñas: una destacada y dos pequeñas */
+.quotes { grid-template-columns: 1fr; }
+@media (min-width: 600px) { .quotes { grid-template-columns: repeat(2, 1fr); } .quote--featured { grid-column: 1 / -1; } }
+.quote--featured { padding: var(--s-5) var(--s-4) var(--s-4); }
+.quote--featured::before { font-family: var(--font-serif); font-size: 5rem; line-height: .6; color: var(--blue); margin-bottom: 12px; }
+.quote--featured blockquote p { font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: clamp(1.25rem, 1.05rem + 1vw, 1.75rem); line-height: 1.45; letter-spacing: -0.005em; max-width: 52ch; color: var(--ink); }
+.quote--featured .quote__stars { font-size: 1.2rem; }
+.quote--featured figcaption { margin-top: var(--s-3); }
+.quote:not(.quote--featured) { padding: var(--s-3); }
+
+/* Entrada al hacer scroll: opacidad y 16px, 400 ms, una sola vez */
+:root { --t-reveal: 400ms; }
+.js .reveal { transform: translateY(16px); }
+@media (prefers-reduced-motion: reduce) {
+  .card, .quote, .video, .price-card { transition: none; }
+  .card:hover, .quote:hover, .video:hover { transform: none; }
+}
+.services .card--media, .services .card--media.card--lead { padding: 0; }
+.card__media { height: auto; display: block; }
