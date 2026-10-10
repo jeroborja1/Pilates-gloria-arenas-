@@ -782,3 +782,10 @@ a:hover { color: var(--blue-deep); }
   .brand img { width: 68px; height: 68px; }
   .site-header .container { min-height: 88px; }
 }
+
+/* Servicios: seis tarjetas, cada una con su página */
+.featured--six { margin-bottom: 0; }
+.featured--six .card--featured { padding: clamp(24px, 3vw, 32px); }
+.featured--six .card--featured h3 { font-size: clamp(1.4rem, 1.2rem + .8vw, 1.75rem); }
+@media (min-width: 600px) { .featured--six { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .featured--six { grid-template-columns: repeat(3, 1fr); } }
