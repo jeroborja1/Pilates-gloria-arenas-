@@ -71,3 +71,6 @@ Total de pendientes listados: **20**
 - [ ] Reclamar o actualizar Google Business Profile con la misma dirección, teléfono y horarios
 - [ ] Pedir reseñas en Google a pacientes (la sección "Lo que dicen" enlaza a ellas)
 - [ ] No publicar: `_originales/`, `serve.js`, `check-todos.sh`, `*.backup*`, el `.zip` y los `.mp4` de WhatsApp
+
+## Dominio
+- [ ] Publicado en https://pilates-gloria-arenas.vercel.app. Al comprar el dominio propio: agregarlo en Vercel y reemplazar `pilates-gloria-arenas.vercel.app` por el dominio real en canonical, og:url, og:image, JSON-LD, sitemap.xml y robots.txt.

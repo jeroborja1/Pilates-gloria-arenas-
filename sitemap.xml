@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: reemplazar TODO-DOMINIO.com por el dominio real -->
+<!-- TODO: reemplazar pilates-gloria-arenas.vercel.app por el dominio real -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://TODO-DOMINIO.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://TODO-DOMINIO.com/perfil-profesional.html</loc><priority>0.8</priority></url>
-  <url><loc>https://TODO-DOMINIO.com/contacto.html</loc><priority>0.8</priority></url>
-  <url><loc>https://TODO-DOMINIO.com/pilates-bogota.html</loc><priority>0.9</priority></url>
-  <url><loc>https://TODO-DOMINIO.com/hipopresivos-bogota.html</loc><priority>0.9</priority></url>
-  <url><loc>https://TODO-DOMINIO.com/pilates-embarazadas-bogota.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/perfil-profesional.html</loc><priority>0.8</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/contacto.html</loc><priority>0.8</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/pilates-bogota.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/hipopresivos-bogota.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pilates-gloria-arenas.vercel.app/pilates-embarazadas-bogota.html</loc><priority>0.9</priority></url>
 </urlset>

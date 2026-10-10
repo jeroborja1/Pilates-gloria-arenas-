@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# TODO: reemplazar TODO-DOMINIO.com por el dominio real
-Sitemap: https://TODO-DOMINIO.com/sitemap.xml
+# TODO: reemplazar pilates-gloria-arenas.vercel.app por el dominio real
+Sitemap: https://pilates-gloria-arenas.vercel.app/sitemap.xml

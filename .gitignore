@@ -6,3 +6,5 @@ variantes/
 *.mp4
 node_modules/
 .vercel/
+
+.vercel
